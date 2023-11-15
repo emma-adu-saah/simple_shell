@@ -18,10 +18,4 @@ void tokenizer(char *str, char **tokens)
 		piece = strtok(NULL, " ");
 		tokens[i] = piece;
 	}
-	tokens[i] = NULL;
-	for (i = 0; tokens[i] != NULL; i++)
-	{
-		printf("%s\n", tokens[i]);
-	}
-	printf("%d", i);
 }

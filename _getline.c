@@ -24,6 +24,7 @@ char *_readline(void)
 		perror("Can't read from stdin");
 	}
 	tokenizer(buffer, tok);
+	tok[0][bytes_read - 1] = '\0';
 	execute(tok);
 	return (buffer);
 }
