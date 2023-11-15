@@ -9,4 +9,6 @@
 
 void prompt(void);
 char *_readline(void);
+void tokenizer(char *str, char **tokens);
+void execute(char **argv);
 #endif

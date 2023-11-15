@@ -11,6 +11,8 @@ char *_readline(void)
 	ssize_t bytes_read;
 	size_t buffer_size = BUFFER_SIZE;
 	char *buffer = malloc(BUFFER_SIZE);
+	char **tok = malloc(BUFFER_SIZE);
+	int i;
 
 	if (buffer == NULL)
 	{
@@ -18,6 +20,14 @@ char *_readline(void)
 		return (NULL);
 	}
 	bytes_read = read(0, buffer, buffer_size);
-	buffer[bytes_read] = '\0';
+	if (bytes_read == -1)
+	{
+		perror("Can't read from stdin");
+	}
+	tokenizer(buffer, tok);
+	for (i = 0; tok[i] != NULL; i++)
+	{
+		printf("%s\n", tok[i]);
+	}
 	return (buffer);
 }
