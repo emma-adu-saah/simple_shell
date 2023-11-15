@@ -10,7 +10,7 @@ void tokenizer(char *str, char **tokens)
 	char *piece;
 	int i = 0;
 
-	piece = strtok(str, " ,!");
+	piece = strtok(str, " ");
 	tokens[i] = piece;
 	while (piece != NULL)
 	{

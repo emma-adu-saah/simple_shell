@@ -2,7 +2,7 @@
 
 #define BUFFER_SIZE 1024
 /**
- *_getline - Reads line from the standard input using getline()
+ *_readline - Reads line from the standard input using getline()
  *Return: Returns the bytes read
  **/
 char *_readline(void)
