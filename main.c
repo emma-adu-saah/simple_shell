@@ -9,6 +9,7 @@ int main(void)
 	{
 		prompt();
 		_readline();
+		break;
 	}
 	return (0);
 }
