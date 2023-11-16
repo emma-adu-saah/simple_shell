@@ -25,6 +25,7 @@ void execute(char **argv)
 		if (_exec == -1)
 		{
 			perror("Can't execute command");
+			exit(EXIT_FAILURE);
 		}
 	}
 }

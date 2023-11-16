@@ -7,15 +7,15 @@
  **/
 void tokenizer(char *str, char **tokens)
 {
-	char *piece;
+	char *tk;
 	int i = 0;
 
 	piece = strtok(str, " ");
-	tokens[i] = piece;
+	tokens[i] = tk;
 	while (piece != NULL)
 	{
 		i++;
-		piece = strtok(NULL, " ");
-		tokens[i] = piece;
+		tk = strtok(NULL, " ");
+		tokens[i] = tk;
 	}
 }
