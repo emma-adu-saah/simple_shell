@@ -10,12 +10,13 @@ void tokenizer(char *str, char **tokens)
 	char *tk;
 	int i = 0;
 
-	piece = strtok(str, " ");
+	tk = strtok(str, " ");
 	tokens[i] = tk;
-	while (piece != NULL)
+	while (tk != NULL)
 	{
 		i++;
 		tk = strtok(NULL, " ");
 		tokens[i] = tk;
 	}
+	tokens[i] = NULL;
 }

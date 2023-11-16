@@ -19,12 +19,15 @@ char *_readline(void)
 		return (NULL);
 	}
 	bytes_read = read(0, buffer, buffer_size);
-	if (bytes_read == -1 || bytes_read == NULL)
+	if (bytes_read == -1)
 	{
 		perror("Can't read from stdin");
 	}
-	tokenizer(buffer, tok);
-	tok[0][bytes_read - 1] = '\0';
-	execute(tok);
+	else
+	{
+		tokenizer(buffer, tok);
+		tok[0][bytes_read - 1] = '\0';
+		execute(tok);
+	}
 	return (buffer);
 }
